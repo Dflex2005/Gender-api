@@ -1,0 +1,151 @@
+$cardColor:rgb(14, 7, 46) ;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(3, 0, 17);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: cursive;
+}
+
+header h1{
+    font-size: 50px;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.info .left{
+    width: 300px;
+    background: $cardColor;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    
+}
+
+.left #name{
+    width: 95%;
+    height: 35px;
+    border-radius: 20px;
+    outline: none;
+    padding: 0 5px;
+    border: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+
+.left .btn{
+    background: rgb(3, 0, 17);
+    color: white;
+    padding: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    border: 1px solid rgb(3, 0, 17);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s ease;
+    &:hover{
+        background: none;
+        border-color: white;
+    }
+}
+
+.right{
+    margin: 10px;
+    width: 300px;
+    height: 160px;
+    background: $cardColor;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    position: relative;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.right .title{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.right .result{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.result .gender{
+    font-size: 20px;
+}
+
+.result p{
+    text-align: center;
+    font-family: calibri;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.main{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(56, 47, 173);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 15px;
+    top: -60px;
+    display: none;
+    
+}
+
+
+.show{
+    display: flex;
+    animation: .8s ease top forwards;
+}
+
+@keyframes top{
+    0%{
+        top: -60px;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+.svg{
+    position: absolute;
+    bottom: 0;
+}
